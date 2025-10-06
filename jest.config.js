@@ -39,4 +39,13 @@ module.exports = {
     ],
     // For Circle CI
     reporters: ["default", "jest-junit"],
+    // Fix for open handles in CI
+    testEnvironment: 'node',
+    forceExit: true,
+    // Increase timeout for CI
+    testTimeout: 30000,
+    // Run tests serially to avoid file conflicts
+    maxWorkers: 1,
+    // Setup file for cleanup
+    setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 };
