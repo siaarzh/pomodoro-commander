@@ -29,7 +29,11 @@
         "style-pack": "webpack --config webpack.style.js ",
         "todos": "grep -r \"TODO\\|FIXME\\|HACK\" src/ --include=\"*.ts\" --include=\"*.tsx\" || echo 'No TODOs found in code'",
         "todos-all": "grep -r \"TODO\\|FIXME\\|HACK\" . --include=\"*.ts\" --include=\"*.tsx\" --include=\"*.md\" || echo 'No TODOs found'",
-        "status": "echo 'Current branch:' && git branch --show-current && echo 'Last commit:' && git log --oneline -1"
+        "status": "echo 'Current branch:' && git branch --show-current && echo 'Last commit:' && git log --oneline -1",
+        "wsl:test": "wsl -d Ubuntu -- bash -c \"cd /mnt/c/Users/serzh/repos/my-pomodoro-commander && yarn test\"",
+        "wsl:build": "wsl -d Ubuntu -- bash -c \"cd /mnt/c/Users/serzh/repos/my-pomodoro-commander && yarn build\"",
+        "wsl:install": "wsl -d Ubuntu -- bash -c \"cd /mnt/c/Users/serzh/repos/my-pomodoro-commander && yarn install --ignore-optional\"",
+        "wsl:ci-test": "wsl -d Ubuntu -- bash -c \"cd /mnt/c/Users/serzh/repos/my-pomodoro-commander && yarn test && yarn build\""
     },
     "husky": {
         "hooks": {

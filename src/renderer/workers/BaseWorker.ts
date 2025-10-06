@@ -18,9 +18,9 @@ export abstract class BaseWorker {
         return new Promise((resolve, reject) => {
             let isDone = false;
             let timeoutId: NodeJS.Timeout | undefined;
-
+            
             const listener = ({
-                data: { type, payload, code },
+                data: { type, payload, code }
             }: {
                 data: { type: string; payload: any; code: number };
             }) => {

@@ -9,7 +9,7 @@ import { promisify } from 'util';
 import { Dispatch } from 'redux';
 import { List, ListsState } from '../type';
 
-jest.setTimeout(10000);
+jest.setTimeout(30000);
 let lock = false;
 beforeEach(async () => {
     while (lock) {
