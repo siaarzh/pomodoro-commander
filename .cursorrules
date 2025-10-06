@@ -18,15 +18,17 @@ This is a fork of PomodoroLogger, rebranded as "Pomodoro Commander" - a producti
 - Test with Jest before committing
 
 ## Current TODOs
-- [ ] Set up Node.js v16.13.2 development environment
-- [ ] Test build process with correct Node.js version
-- [ ] Verify all features work after rebranding
-- [ ] Update any remaining hardcoded references
-- [ ] Test cross-platform builds (Windows/Mac/Linux)
-- [ ] Set up development workflow documentation
+- [x] Set up Node.js v16.13.2 development environment
+- [x] Test build process with correct Node.js version
+- [x] Verify all features work after rebranding
+- [x] Update any remaining hardcoded references
+- [x] Test cross-platform builds (Windows/Mac/Linux)
+- [x] Set up development workflow documentation
 
-## Future Enhancements (Node.js v24+ branch)
+## Next Phase: Node.js v24+ Upgrade
+- [ ] Follow UPGRADE_ROADMAP.md for modernization
 - [ ] Update nedb to modern database library
 - [ ] Replace happypack with thread-loader
 - [ ] Fix OpenSSL compatibility issues
 - [ ] Update all dependencies to latest versions
+- [ ] Remove temporary workarounds and Windows-specific scripts

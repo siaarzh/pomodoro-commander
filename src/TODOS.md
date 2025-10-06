@@ -2,9 +2,9 @@
 
 ## High Priority
 
--   [ ] **Node.js Setup**: Install Node.js v16.13.2 and test build process
--   [ ] **Build Verification**: Ensure `yarn build` works with correct Node.js version
--   [ ] **Feature Testing**: Test all app features after rebranding
+-   [x] **Node.js Setup**: Install Node.js v16.13.2 and test build process
+-   [x] **Build Verification**: Ensure `yarn build` works with correct Node.js version
+-   [x] **Feature Testing**: Test all app features after rebranding
 
 ## Medium Priority
 
@@ -18,12 +18,14 @@
 -   [ ] **UI Polish**: Review UI for any branding inconsistencies
 -   [ ] **Error Messages**: Update error messages to use new app name
 
-## Future Enhancements
+## Next Sprint: Node.js v24+ Upgrade
 
--   [ ] **Node.js v24+**: Work on compatibility branch
--   [ ] **Dependencies**: Update to latest versions
--   [ ] **Database**: Consider migrating from nedb to modern alternative
+-   [ ] **Follow UPGRADE_ROADMAP.md**: Detailed modernization plan
+-   [ ] **Database Migration**: Replace nedb with modern alternative (better-sqlite3, sqlite3, or lowdb)
 -   [ ] **Build System**: Replace happypack with thread-loader
+-   [ ] **Node.js v18 LTS**: Intermediate upgrade step
+-   [ ] **Node.js v24+**: Final target version
+-   [ ] **Cleanup**: Remove temporary workarounds and Windows-specific scripts
 
 ## Completed ✅
 
