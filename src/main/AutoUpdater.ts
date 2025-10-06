@@ -1,3 +1,11 @@
+/**
+ * Based on Pomodoro Logger by Zixuan Chen
+ * Original: https://github.com/zxch3n/PomodoroLogger
+ * Modified by: Serzhan Akhmetov
+ * 
+ * Licensed under GPL-3.0
+ */
+
 import { autoUpdater } from 'electron-updater';
 import { GithubOptions } from 'builder-util-runtime';
 
@@ -42,8 +50,8 @@ export class AutoUpdater {
     checkUpdate() {
         const data = {
             provider: 'github',
-            owner: 'zxch3n',
-            repo: 'PomodoroLogger'
+            owner: 'siaarzh',
+            repo: 'pomodoro-commander'
         } as GithubOptions;
         autoUpdater.setFeedURL(data);
         autoUpdater.autoDownload = false;

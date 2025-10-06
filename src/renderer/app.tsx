@@ -1,3 +1,11 @@
+/**
+ * Based on Pomodoro Logger by Zixuan Chen
+ * Original: https://github.com/zxch3n/PomodoroLogger
+ * Modified by: Serzhan Akhmetov
+ * 
+ * Licensed under GPL-3.0
+ */
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';

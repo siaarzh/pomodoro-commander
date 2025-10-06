@@ -21,8 +21,22 @@
 
 
 
-# Pomodoro Logger :clock930:
+# Pomodoro Commander :clock930:
 
+> **Fork of [Pomodoro Logger](https://github.com/zxch3n/PomodoroLogger) by Zixuan Chen**
+
+**Pomodoro Commander** is a fork of the excellent Pomodoro Logger project created by [Zixuan Chen](https://github.com/zxch3n). 
+Command your productivity with a powerful combination of Pomodoro technique, time tracking, and Kanban boards.
+
+## Original Project
+- **Original Repository**: https://github.com/zxch3n/PomodoroLogger
+- **Original Author**: Zixuan Chen (remch183@outlook.com)
+- **Original License**: GPL-3.0
+
+## Pomodoro Commander
+- **Forked by**: Serzhan Akhmetov
+- **Repository**: https://github.com/siaarzh/pomodoro-commander
+- **License**: GPL-3.0 (same as original)
 
 > **Invest your time easily**
 

@@ -1,7 +1,7 @@
 {
-    "name": "pomodoro-logger",
-    "version": "0.6.3",
-    "description": "Pomodoro Logger -- When a time logger meets Pomodoro and Kanban board",
+    "name": "pomodoro-commander",
+    "version": "0.1.0",
+    "description": "Pomodoro Commander -- Command your productivity with Pomodoro technique, time tracking, and Kanban boards",
     "main": "./dist/main.js",
     "scripts": {
         "build-main": "cross-env NODE_ENV=production webpack --config webpack.main.prod.config.js",
@@ -45,12 +45,12 @@
     },
     "build": {
         "afterSign": "electron-builder-notarize",
-        "productName": "Pomodoro Logger",
-        "appId": "com.github.rem2016.pomodoro-logger",
+        "productName": "Pomodoro Commander",
+        "appId": "com.github.siaarzh.pomodoro-commander",
         "publish": {
             "provider": "github",
-            "owner": "zxch3n",
-            "repo": "PomodoroLogger"
+            "owner": "siaarzh",
+            "repo": "pomodoro-commander"
         },
         "mac": {
             "category": "public.app-category.productivity",
@@ -82,17 +82,17 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@github.com:zxch3n/PomodoroLogger.git"
+        "url": "git+https://github.com/siaarzh/pomodoro-commander.git"
     },
     "author": {
-        "name": "Zixuan Chen",
-        "email": "remch183@outlook.com"
+        "name": "Serzhan Akhmetov",
+        "email": "serzhan.akhmetov@gmail.com"
     },
     "license": "LGPL-3.0-or-later",
     "bugs": {
-        "url": "https://github.com/zxch3n/PomodoroLogger/issues"
+        "url": "https://github.com/siaarzh/pomodoro-commander/issues"
     },
-    "homepage": "https://github.com/zxch3n/PomodoroLogger",
+    "homepage": "https://github.com/siaarzh/pomodoro-commander",
     "devDependencies": {
         "@babel/core": "^7.4.5",
         "@babel/plugin-proposal-class-properties": "^7.4.4",
