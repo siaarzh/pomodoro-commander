@@ -24,8 +24,17 @@ jobs:
           node-version: 16.13.2
           cache: 'yarn'
       
+      - name: Install build tools (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          brew install python@3.9
+          echo "Python installed for node-sass"
+      
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --ignore-optional
+        env:
+          PYTHON: python3
+          npm_config_python: python3
       
       - name: Run tests with coverage
         run: yarn test
@@ -57,8 +66,17 @@ jobs:
           node-version: 16.13.2
           cache: 'yarn'
       
+      - name: Install build tools (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          brew install python@3.9
+          echo "Python installed for node-sass"
+      
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --ignore-optional
+        env:
+          PYTHON: python3
+          npm_config_python: python3
       
       - name: Build application
         run: yarn build
