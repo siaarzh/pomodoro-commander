@@ -17,8 +17,10 @@ export abstract class BaseWorker {
         postMsg.code = _code;
         return new Promise((resolve, reject) => {
             let isDone = false;
+            let timeoutId: NodeJS.Timeout | undefined;
+
             const listener = ({
-                data: { type, payload, code }
+                data: { type, payload, code },
             }: {
                 data: { type: string; payload: any; code: number };
             }) => {
@@ -44,6 +46,9 @@ export abstract class BaseWorker {
 
                 isDone = true;
                 this.worker.removeEventListener('message', listener);
+                if (timeoutId) {
+                    clearTimeout(timeoutId);
+                }
                 resolve(value);
             };
 
@@ -51,8 +56,10 @@ export abstract class BaseWorker {
             this.worker.postMessage(postMsg);
 
             if (timeout !== undefined) {
-                setTimeout(() => {
+                timeoutId = setTimeout(() => {
                     if (isDone) return;
+                    isDone = true;
+                    this.worker.removeEventListener('message', listener);
                     reject(
                         new Error(`Timeout ${timeout} ms after message ${JSON.stringify(postMsg)}`)
                     );

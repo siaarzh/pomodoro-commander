@@ -30,7 +30,7 @@ describe('BaseWorker', () => {
         class TestWorker extends BaseWorker {
             // @ts-ignore
             protected worker = new MWorker({
-                start: (listen: Listen, msg: Message) => listen({ code: msg.code, type: 'start' })
+                start: (listen: Listen, msg: Message) => listen({ code: msg.code, type: 'start' }),
             });
         }
 
@@ -38,8 +38,9 @@ describe('BaseWorker', () => {
         await testWorker.createHandler(
             { type: 'start' },
             {
-                start: (acc, done) => done()
-            }
+                start: (acc, done) => done(),
+            },
+            100 // Short timeout for test
         );
     });
 
@@ -52,7 +53,7 @@ describe('BaseWorker', () => {
                         () => listen({ code: msg.code, type: 'start', payload: msg.payload }),
                         500
                     );
-                }
+                },
             });
         }
 
@@ -63,8 +64,9 @@ describe('BaseWorker', () => {
                 testWorker.createHandler(
                     { type: 'start', payload: i },
                     {
-                        start: (data, done) => done(data)
-                    }
+                        start: (data, done) => done(data),
+                    },
+                    500 // Short timeout for test
                 )
             );
         }
@@ -80,13 +82,13 @@ describe('BaseWorker', () => {
             // @ts-ignore
             protected worker = new MWorker({
                 start: (listen: Listen, msg: Message) =>
-                    listen({ code: msg.code, type: 'error', payload: msg.payload })
+                    listen({ code: msg.code, type: 'error', payload: msg.payload }),
             });
         }
 
         const testWorker = new TestWorker();
         expect(
-            await testWorker.createHandler({ type: 'start' }, {}).catch(error => {
+            await testWorker.createHandler({ type: 'start' }, {}, 100).catch((error) => {
                 return 'error';
             })
         ).toBe('error');
@@ -101,13 +103,13 @@ describe('BaseWorker', () => {
                         () => listen({ code: msg.code, type: 'error', payload: msg.payload }),
                         1000
                     );
-                }
+                },
             });
         }
 
         const testWorker = new TestWorker();
         expect(
-            await testWorker.createHandler({ type: 'start' }, {}, 100).catch(error => {
+            await testWorker.createHandler({ type: 'start' }, {}, 100).catch((error) => {
                 return 'error';
             })
         ).toBe('error');
