@@ -1,0 +1,32 @@
+# Pomodoro Commander - Cursor AI Rules
+
+## Project Context
+This is a fork of PomodoroLogger, rebranded as "Pomodoro Commander" - a productivity app combining Pomodoro technique, time tracking, and Kanban boards.
+
+## Current Status
+- ✅ Rebranding complete (PomodoroLogger → Pomodoro Commander)
+- ✅ Node.js v16.13.2 compatibility setup
+- ✅ Cross-platform build system configured
+- ✅ CI/CD with Codecov integration
+- ⚠️ Requires Node.js v16.13.2 (see .nvmrc)
+
+## Development Guidelines
+- Use TypeScript throughout
+- Follow existing code style (tslint + prettier)
+- Use styled-components for styling
+- Maintain Electron app structure (main + renderer processes)
+- Test with Jest before committing
+
+## Current TODOs
+- [ ] Set up Node.js v16.13.2 development environment
+- [ ] Test build process with correct Node.js version
+- [ ] Verify all features work after rebranding
+- [ ] Update any remaining hardcoded references
+- [ ] Test cross-platform builds (Windows/Mac/Linux)
+- [ ] Set up development workflow documentation
+
+## Future Enhancements (Node.js v24+ branch)
+- [ ] Update nedb to modern database library
+- [ ] Replace happypack with thread-loader
+- [ ] Fix OpenSSL compatibility issues
+- [ ] Update all dependencies to latest versions

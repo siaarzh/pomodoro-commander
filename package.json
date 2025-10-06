@@ -26,7 +26,10 @@
         "dist-all": "npm run build && electron-builder -mwl",
         "postinstall": "electron-builder install-app-deps",
         "style": "styleguidist server",
-        "style-pack": "webpack --config webpack.style.js "
+        "style-pack": "webpack --config webpack.style.js ",
+        "todos": "grep -r \"TODO\\|FIXME\\|HACK\" src/ --include=\"*.ts\" --include=\"*.tsx\" || echo 'No TODOs found in code'",
+        "todos-all": "grep -r \"TODO\\|FIXME\\|HACK\" . --include=\"*.ts\" --include=\"*.tsx\" --include=\"*.md\" || echo 'No TODOs found'",
+        "status": "echo 'Current branch:' && git branch --show-current && echo 'Last commit:' && git log --oneline -1"
     },
     "husky": {
         "hooks": {
