@@ -6,7 +6,7 @@
     "scripts": {
         "build-main": "cross-env NODE_ENV=production webpack --config webpack.main.prod.config.js",
         "build-renderer": "cross-env NODE_ENV=production webpack --config webpack.renderer.prod.config.js",
-        "prebuild": "rm -rf ./dist",
+        "prebuild": "rimraf ./dist",
         "build": "concurrently \"npm:build-main\" \"npm:build-renderer\"",
         "start-renderer-dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.renderer.dev.config.js",
         "start-main-dev": "webpack --config webpack.main.config.js",
@@ -16,7 +16,7 @@
         "start:prod": "electron .",
         "lint": "tslint '{src,test,mocks}/**/*.{ts,tsx}' --project ./tsconfig.json",
         "test": "jest --forceExit --detectOpenHandles",
-        "posttest": "rm -rf ./__test__db",
+        "posttest": "rimraf ./__test__db",
         "pretest:e2e": "npm run build",
         "test:e2e": "jest '(\\/test\\/e2e/).*'",
         "pack": "npm run build && electron-builder --dir",
@@ -88,7 +88,7 @@
         "name": "Serzhan Akhmetov",
         "email": "serzhan.akhmetov@gmail.com"
     },
-    "license": "LGPL-3.0-or-later",
+    "license": "GPL-3.0",
     "bugs": {
         "url": "https://github.com/siaarzh/pomodoro-commander/issues"
     },

@@ -68,7 +68,7 @@ export function initialize() {
     });
     handle(IpcEventName.ExportData, async () => {
         const path = await dialog.showSaveDialog({
-            defaultPath: 'pomodoro-logger-exported-data.json',
+            defaultPath: 'pomodoro-commander-exported-data.json',
             filters: [
                 {
                     name: 'Json',

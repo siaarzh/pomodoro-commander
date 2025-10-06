@@ -183,7 +183,7 @@ const styles = {
 
 module.exports = {
     components: 'src/components/**/*.{ts,tsx}',
-    title: 'Pomodoro Logger',
+    title: 'Pomodoro Commander',
     ignore: [
         '**/__tests__/**',
         '**/*.test.{js,jsx,ts,tsx}',

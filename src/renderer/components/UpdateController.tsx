@@ -14,7 +14,7 @@ export class UpdateController extends React.Component<any, State> {
         this.state = {
             type: 'hidden',
             progress: 0,
-            versionInfo: ''
+            versionInfo: '',
         };
     }
 
@@ -22,7 +22,7 @@ export class UpdateController extends React.Component<any, State> {
         ipcRenderer.addListener('update-available', (event: any, message: string) => {
             this.setState({
                 versionInfo: message,
-                type: 'update-available'
+                type: 'update-available',
             });
         });
 
@@ -34,8 +34,8 @@ export class UpdateController extends React.Component<any, State> {
             const args = {
                 message: 'Update Download Failed',
                 description:
-                    'You can download manually from https://github.com/zxch3n/PomodoroLogger/releases',
-                duration: 0
+                    'You can download manually from https://github.com/siaarzh/pomodoro-commander/releases',
+                duration: 0,
             };
             notification.open(args);
         });
@@ -54,7 +54,7 @@ export class UpdateController extends React.Component<any, State> {
         const args = {
             message: 'Update Downloaded',
             description: 'When you are ready, quit the app to start installation',
-            duration: 0
+            duration: 0,
         };
         notification.open(args);
     };

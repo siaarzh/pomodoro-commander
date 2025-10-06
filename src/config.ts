@@ -8,7 +8,7 @@ const appdataDir =
     (process.platform === 'darwin'
         ? process.env.HOME + '/Library/Preferences'
         : process.env.HOME + '/.local/share');
-export const baseDir = join(appdataDir, 'PomodoroLogger');
+export const baseDir = join(appdataDir, 'PomodoroCommander');
 if (!existsSync(baseDir)) {
     mkdirSync(baseDir);
 }

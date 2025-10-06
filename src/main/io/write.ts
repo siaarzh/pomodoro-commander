@@ -68,7 +68,7 @@ export async function generateBackup() {
 
     const backup = await readAllData();
     await promisify(writeFile)(
-        path.join(dbBkBaseDir, 'pomodoro-logger-data-backup.json'),
+        path.join(dbBkBaseDir, 'pomodoro-commander-data-backup.json'),
         JSON.stringify(backup),
         {
             encoding: 'utf-8',

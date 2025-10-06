@@ -19,6 +19,8 @@ const common = {
 module.exports = {
     ...common,
     collectCoverage: true,
+    coverageDirectory: 'coverage',
+    coverageReporters: ['text', 'lcov', 'html'],
     testMatch: ['**/*.(spec|test).[jt]s?(x)'],
     transformIgnorePatterns: [ ],
     globals: {

@@ -5,17 +5,17 @@
 
 
 <p align="center">
-  <a href="https://circleci.com/gh/zxch3n/PomodoroLogger">
-    <img src="https://circleci.com/gh/zxch3n/PomodoroLogger.svg?style=svg"/>
+  <a href="https://github.com/siaarzh/pomodoro-commander/actions">
+    <img src="https://github.com/siaarzh/pomodoro-commander/workflows/CI/badge.svg"/>
   </a>
-  <a href="https://deepscan.io/dashboard#view=project&tid=5098&pid=6887&bid=60495">
-    <img src="https://deepscan.io/api/teams/5098/projects/6887/branches/60495/badge/grade.svg"/>
+  <a href="https://codecov.io/gh/siaarzh/pomodoro-commander">
+    <img src="https://codecov.io/gh/siaarzh/pomodoro-commander/branch/master/graph/badge.svg" />
   </a>
-  <a href="https://codecov.io/gh/zxch3n/PomodoroLogger">
-    <img src="https://codecov.io/gh/zxch3n/PomodoroLogger/branch/master/graph/badge.svg" />
+  <a href="https://github.com/siaarzh/pomodoro-commander/releases/latest">
+    <img src="https://img.shields.io/github/downloads/siaarzh/pomodoro-commander/total" />
   </a>
-  <a href="https://github.com/zxch3n/PomodoroLogger/releases/latest">
-    <img src="https://img.shields.io/github/downloads/zxch3n/PomodoroLogger/total" />
+  <a href="https://github.com/siaarzh/pomodoro-commander">
+    <img src="https://img.shields.io/github/stars/siaarzh/pomodoro-commander?style=social" />
   </a>
 </p>
 
@@ -56,9 +56,9 @@ The working loop in the Pomodoro Technique is split into a 25-minute focus sessi
 
 In the Pomodoro Logger, the app will record the names and titles of the apps you use on your PC during the working sessions. The titles of apps contain rich semantic information. For example, the browser title includes the title of the website being viewed, and the IDE often provides the project path or project name.
 
-- `Pomodoro Technique - Wikipedia - Google Chrome`
-- `DeepMind (@DeepMindAI) | Twitter - Google Chrome`
-- `pomodoro-logger [C:\code\pomodoro-logger] .\src\renderer\components\src\Application.tsx - WebStorm`
+- `Getting Started with React - Mozilla Firefox`
+- `Inbox (5) - Gmail - Microsoft Edge`
+- `project-x [D:\projects\project-x] .\src\main\app\MainWindow.tsx - Visual Studio Code`
 
 
 By connecting your todo items with the corresponding recorded Pomodoro sessions, you can analyze how often you are interrupted by email and social software, the time distribution of the application and application title used to complete the task. It will help you have a more comprehensive understanding of your working hours on PC.
@@ -104,15 +104,15 @@ To make the statistics more accurate, you can keep the cards of the `In Progress
 
 Win10 / macOS / Linux
 
-To download, go to [release page](https://github.com/rem2016/PomodoroLogger/releases).
+To download, go to [release page](https://github.com/siaarzh/pomodoro-commander/releases).
 
 
 # Contribution
 
 I'd love to see you're involved! Read [the Contribution Guide](./.github/CONTRIBUTION.md) for detail.
 
-- The roadmap is shown on the [issue page](https://github.com/zxch3n/PomodoroLogger/issues)
-- If you find a bug or want a new feature, [create a issue](https://github.com/zxch3n/PomodoroLogger/issues)
+- The roadmap is shown on the [issue page](https://github.com/siaarzh/pomodoro-commander/issues)
+- If you find a bug or want a new feature, [create a issue](https://github.com/siaarzh/pomodoro-commander/issues)
 - If you want to start working on an issue, read [the Contribution Guide](./.github/CONTRIBUTION.md) and comment on the issue to let me know
 
 # Screenshot
@@ -142,4 +142,5 @@ I'd love to see you're involved! Read [the Contribution Guide](./.github/CONTRIB
 
 [GPL-3.0 License](./LICENSE)
 
-Copyright © 2019 Zixuan Chen.
+Copyright © 2019 Zixuan Chen.  
+Copyright © 2024 Serzhan Akhmetov (Pomodoro Commander fork).

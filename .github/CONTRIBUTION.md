@@ -1,65 +1,121 @@
-# How to contribute 🌟
+# Contributing to Pomodoro Commander
 
-I'm really happy you're reading this.😄 Thanks for taking the time to contribute!👍
+Thank you for your interest in contributing to Pomodoro Commander! This document provides guidelines and information for contributors.
 
-- Pomodoro Logger's roadmap is shown on the [issue page](https://github.com/zxch3n/PomodoroLogger/issues)
-- If you find a bug or want a new feature, [create an issue](https://github.com/zxch3n/PomodoroLogger/issues)
-- If you want to work on an issue, comment on it to let me know
+## Getting Started
 
-# Development
+### Prerequisites
 
-This project is built by [Electron](https://electronjs.org). 
+- Node.js v16.13.2 (use `.nvmrc` file)
+- Yarn package manager
+- Git
 
-You only need to install the latest version of node.js and node-gyp to build this project.
+#### Node.js Version Management
 
-Issue the following commands to make sure you are ready to go,
+This project requires Node.js v16.13.2. Use one of these methods:
 
-```
-yarn
-yarn build
-yarn test
-```
-
-Start development 💻
-
-```
-yarn start
-```
-
-```
-// within another terminal
-npx electron .
-```
-- If you are using windows10 install bash shell for running above commands
-
----
-
-If you are in China, there may be a connection problem when setting things up. 
-
-Before running `yarn`, issue 
-
-```
-ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
-```
-
-Alternatively, you can add the following lines to `.npmrc` and `.yarnrc` files.
-
+**Option A: Using nvm (Recommended)**
 ```bash
-# ~/.npmrc
-registry=https://registry.npm.taobao.org
-electron_mirror=https://npm.taobao.org/mirrors/electron/
+# Install nvm first, then:
+nvm install 16.13.2
+nvm use 16.13.2
 ```
 
-and
-
+**Option B: Using Volta**
 ```bash
-# ~/.yarnrc
-registry "https://registry.npm.taobao.org"
-electron_mirror "https://npm.taobao.org/mirrors/electron/"
+# Install Volta first, then:
+volta install node@16.13.2
 ```
 
+**Option C: Direct Download**
+Download Node.js v16.13.2 from [nodejs.org](https://nodejs.org/)
+
+### Development Setup
+
+1. **Fork and clone the repository**
+   ```bash
+   git clone https://github.com/siaarzh/pomodoro-commander.git
+   cd pomodoro-commander
+   ```
+
+2. **Install dependencies**
+   ```bash
+   yarn install
+   ```
+
+3. **Build the project**
+   ```bash
+   yarn build
+   ```
+
+4. **Run tests**
+   ```bash
+   yarn test
+   ```
+
+5. **Start development**
+   ```bash
+   yarn start
+   ```
+
+## How to Contribute
+
+### Reporting Issues
+
+- Check existing [issues](https://github.com/siaarzh/pomodoro-commander/issues) before creating a new one
+- Use the provided issue templates for bug reports and feature requests
+- Provide clear descriptions and steps to reproduce
+
+### Submitting Changes
+
+1. **Create a feature branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+2. **Make your changes**
+   - Follow the coding conventions below
+   - Add tests for new functionality
+   - Update documentation as needed
+
+3. **Test your changes**
+   ```bash
+   yarn test
+   yarn lint
+   ```
+
+4. **Commit your changes**
+   ```bash
+   git commit -m "feat: add your feature description"
+   ```
+
+5. **Push and create a Pull Request**
+   ```bash
+   git push origin feature/your-feature-name
+   ```
 
 ## Coding Conventions
 
-- Don't use independent CSS file, use [styled-component](https://www.styled-components.com) instead
-- Follow the linter
+- **Styling**: Use [styled-components](https://www.styled-components.com) instead of separate CSS files
+- **Code Style**: Follow the existing ESLint configuration
+- **TypeScript**: Maintain type safety and add proper type annotations
+- **Testing**: Write tests for new features and bug fixes
+- **Commits**: Use conventional commit messages (feat:, fix:, docs:, etc.)
+
+## Project Structure
+
+- `src/main/` - Electron main process code
+- `src/renderer/` - React frontend code
+- `src/shared/` - Shared utilities and types
+- `src/components/` - Reusable UI components
+
+## Development Notes
+
+- This is an Electron application with React frontend
+- The project uses TypeScript throughout
+- State management is handled with Redux
+- Database operations use NeDB (local JSON database)
+
+## Questions?
+
+Feel free to open an issue or start a discussion if you have any questions about contributing!

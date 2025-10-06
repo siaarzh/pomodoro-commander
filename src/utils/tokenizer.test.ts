@@ -21,13 +21,18 @@ describe('Tokenizer', () => {
             'Chrome',
         ]);
 
-        expectTokenizer('C:\\CODE\\js\\pomodoro-logger', ['C', 'CODE', 'js', 'pomodoro-logger']);
+        expectTokenizer('C:\\CODE\\js\\pomodoro-commander', [
+            'C',
+            'CODE',
+            'js',
+            'pomodoro-commander',
+        ]);
 
-        expectTokenizer('/home/dat/project/pomodoro-logger', [
+        expectTokenizer('/home/dat/project/pomodoro-commander', [
             'home',
             'dat',
             'project',
-            'pomodoro-logger',
+            'pomodoro-commander',
         ]);
 
         expectTokenizer('/home/.bin/.vscode', ['home', 'bin', 'vscode']);
